@@ -18,10 +18,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Configurar e Instalar Flutter SDK
+      - name: Configurar e Instalar Flutter SDK (Actualizado a 3.24.0)
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.0'
+          flutter-version: '3.24.0'
 
       - name: Configurar Python 3.12
         uses: actions/setup-python@v5
@@ -34,9 +34,9 @@ jobs:
           pip install "flet[cli]"
           pip install -r requirements.txt
 
-      - name: Traducir codigo y Compilar APK Nativo
+      - name: Traducir codigo y Compilar APK Nativo (Con confirmacion automatica)
         run: |
-          flet build apk
+          flet build apk --yes
 
       - name: Subir Archivo APK para Descarga Directa
         uses: actions/upload-artifact@v4
