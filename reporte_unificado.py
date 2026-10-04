@@ -1,7 +1,8 @@
 import openpyxl
 from openpyxl.chart import LineChart, Reference
 import matplotlib
-matplotlib.use('Agg') 
+# FORZAR CONFIGURACIÓN LIGERA PARA EVITAR EL ERROR DE ZIP EN ANDROID
+matplotlib.rcParams['backend'] = 'Agg'
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
