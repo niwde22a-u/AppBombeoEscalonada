@@ -36,7 +36,7 @@ jobs:
 
       - name: Traducir codigo y Compilar APK Nativo (Con confirmacion automatica)
         run: |
-          flet build apk --yes
+          flet build apk --python-version 3.12 --yes
 
       - name: Subir Archivo APK para Descarga Directa
         uses: actions/upload-artifact@v4
